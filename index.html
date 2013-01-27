@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Veftússinn</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+		<h1>Veftússinn</h1>
+
+        <!-- Add your site or application content here -->
+        <p>insert canvas.</p>
+
+        <div id="VTMouseLocation"></div>
+        <div id="VTMouseDown"></div>
+        <div id="VTMouseUp"></div>
+
+		<canvas id="VTCanvas" width="400" height="300" style="border:1px solid #000000;">
+			<p>Vafrinn þinn styður ekki canvas virknina</p>
+		</canvas>
+
+		<br />
+
+		<button id="circle">Circle</button>
+		<button id="rectangle">Rectangle</button>
+		<button id="line">Line</button>
+		<button id="characters">Characters</button>
+		<button id="pencil">Pencil</button>
+		<button id="undo">Undo</button>
+		<button id="redo">Redo</button>
+		
+		<p>A tasklist</p>
+		<ol>
+		<li style="text-decoration: line-through;">útfæra onmousedown og að teikna á canvasinn (any shape) HKH</li>
+		<li style="text-decoration: line-through;">create shapes classes ASS</li>
+		<li style="text-decoration: line-through;">add all the shapes to an array HKH</li>
+		<li>add color selector - http://jweir.github.com/colorwheel/</li>
+		<li>be able to add primitive drawing objects to the drawing
+			<ul>
+				<li>a circle HKH</li>
+				<li>rectangle HKH</li>
+				<li style="text-decoration: line-through;">line HKH</li>
+				<li>text</li>
+				<li>freehand drawing by a pen HKH</li>
+			</li>
+		</ul>
+		<li>all elements should be movable. Preferably it should also be possible to move many objects simultaneously</li>
+		<li>should be possible to group these primitives together into a template, which can be saved and then added to a new whiteboard with ease</li>
+		<li>should be possible to save and load a drawing</li>
+		</ol>		
+
+		
+		<p>The requirement list is not written in stone, but the following is a list of possible features:
+			<ul>
+			<li>it should be possible to add primitive drawing objects to the drawing, such as a circle, rectangle, line, text and a pen (i.e. a freehand drawing)</li>
+			<li>It should be possible to group these primitives together into a template, which can be saved and then added to a new whiteboard with ease (example: Luca might want to create a "binary tree node" template, containing a circle with text inside, and two arrows pointing downwards from the circle. Halldór might perhaps want to create a "2nd order equation" template etc.)</li>
+			all elements should be movable. Preferably it should also be possible to move many objects simultaneously (i.e. select many objects first, then move them all together)
+			the application should support undo (and preferably redo as well)</li>
+			<li>it should be possible to save and load a drawing</li>
+			<li>Bonus points: the application should support math formulas, and symbols commonly used in math (such as Pi, the sum symbol etc.). You are free to experiment with the implementation of this, one possibility is to be able to write equations in some sort of a language which would then be converted to a drawing by the application.</li>
+			</ul>
+		</p>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="js/Base.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/drawing_classes.js"></script>
+        <script src="js/main.js"></script>
+		<script>
+		
+		</script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+		-->
+    </body>
+</html>
