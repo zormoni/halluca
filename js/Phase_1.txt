@@ -1,0 +1,16 @@
+Dump of assembler code for function phase_1:
+   0x08048ea0 <+0>:	push   %ebp
+   0x08048ea1 <+1>:	mov    %esp,%ebp
+   0x08048ea3 <+3>:	sub    $0x18,%esp
+   0x08048ea6 <+6>:	movl   $0x804a0b0,0x4(%esp)    BREAKPOINT
+                           Færðu innihald þess sem er 4 bæti frá minnishólfinu sem geymir StackPointer inn í minnishólf $0x804a0b0
+   0x08048eae <+14>:	mov    0x8(%ebp),%eax
+                           Færðu innihald %eax ("hilmar") inn í minnishólf 8 bætum frá staðsetningu ebp
+   0x08048eb1 <+17>:	mov    %eax,(%esp)
+   0x08048eb4 <+20>:	call   0x8048eeb <strings_not_equal>
+   0x08048eb9 <+25>:	test   %eax,%eax
+   0x08048ebb <+27>:	je     0x8048ec2 <phase_1+34>
+   0x08048ebd <+29>:	call   0x80490e8 <explode_bomb>
+   0x08048ec2 <+34>:	leave  
+   0x08048ec3 <+35>:	ret    
+End of assembler dump.

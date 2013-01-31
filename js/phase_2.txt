@@ -1,0 +1,40 @@
+Dump of assembler code for function phase_2:
+   0x08048cf0 <+0>:	push   %ebp
+   0x08048cf1 <+1>:	mov    %esp,%ebp
+   0x08048cf3 <+3>:	push   %esi
+   0x08048cf4 <+4>:	push   %ebx
+=> 0x08048cf5 <+5>:	sub    $0x30,%esp
+      --Drögum 0x30 frá minnisaddressunni sem esp geymir (0xffffd4f0-30=0xffffd4c0
+      --Möö færum stackpointerinn um -0x30 (30 bæti))
+   0x08048cf8 <+8>:	lea    -0x20(%ebp),%eax
+      --lea = load effective address
+      --%ebp geymir addressuna 0x8049e90 og við viljum fara -20 frá henni eða í
+      --0x8049e70.  Hvað gerist svo er ég ekki viss um.
+   0x08048cfb <+11>:	mov    %eax,0x4(%esp)
+      --Færa innihald úr 0x4 frá innihald %esp inn í %eax (Tökum parameter 1 og      --setjum inn í %eax)
+   0x08048cff <+15>:	mov    0x8(%ebp),%eax
+      --Færa innhald úr %eax inn í minnisaddressu sem er 8 bæti frá þeirri addressu  --sem %ebp geymir
+   0x08048d02 <+18>:	mov    %eax,(%esp)
+      --Færa það sem %esp (stackpointer) geymir yfir í %eax
+   0x08048d05 <+21>:	call   0x804912a <read_six_numbers>
+   0x08048d0a <+26>:	cmpl   $0x0,-0x20(%ebp)
+   0x08048d0e <+30>:	jne    0x8048d16 <phase_2+38>
+   0x08048d10 <+32>:	cmpl   $0x1,-0x1c(%ebp)
+   0x08048d14 <+36>:	je     0x8048d1b <phase_2+43>
+   0x08048d16 <+38>:	call   0x80490e8 <explode_bomb>
+   0x08048d1b <+43>:	lea    -0x18(%ebp),%ebx
+   0x08048d1e <+46>:	lea    -0x8(%ebp),%esi
+   0x08048d21 <+49>:	mov    -0x4(%ebx),%eax
+   0x08048d24 <+52>:	add    -0x8(%ebx),%eax
+   0x08048d27 <+55>:	cmp    %eax,(%ebx)
+   0x08048d29 <+57>:	je     0x8048d30 <phase_2+64>
+   0x08048d2b <+59>:	call   0x80490e8 <explode_bomb>
+   0x08048d30 <+64>:	add    $0x4,%ebx
+   0x08048d33 <+67>:	cmp    %esi,%ebx
+   0x08048d35 <+69>:	jne    0x8048d21 <phase_2+49>
+   0x08048d37 <+71>:	add    $0x30,%esp
+   0x08048d3a <+74>:	pop    %ebx
+   0x08048d3b <+75>:	pop    %esi
+   0x08048d3c <+76>:	pop    %ebp
+   0x08048d3d <+77>:	ret    
+End of assembler dump.
